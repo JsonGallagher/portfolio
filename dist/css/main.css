@@ -16,7 +16,7 @@
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
-      background: #eece1a; }
+      background: #46a0f5; }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
@@ -60,7 +60,38 @@
       height: 250px;
       background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #46a0f5; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #46a0f5; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #46a0f5; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.08s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.16s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.24s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.32s; }
 
 * {
   box-sizing: border-box; }
@@ -111,7 +142,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #46a0f5; }
 
 main {
   padding: 4rem;
@@ -121,7 +152,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #46a0f5;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }

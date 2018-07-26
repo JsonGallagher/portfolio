@@ -39,6 +39,10 @@ a {
     text-decoration: none;
   }
 
+.name {
+
+}
+
 header {
   position: fixed;
   z-index: 2;
@@ -47,7 +51,6 @@ header {
 
 .text-secondary {
   color: $secondary-color;
-
 }
 
 main {
