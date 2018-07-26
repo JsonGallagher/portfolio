@@ -24,14 +24,16 @@
       //line 1 - Rotate
         &:nth-child(1) {
           transform: rotate(45deg) translate(5px, 5px);
+          background: $secondary-color;
         }
       //line 2 - Hide
         &:nth-child(2) {
           opacity: 0;
         }
       //line 3 - Rotate
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+          box-shadow: 2px -2px 5px #000;
       }
     }
   }
