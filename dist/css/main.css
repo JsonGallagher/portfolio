@@ -236,7 +236,7 @@ img {
 
 .fa-heart {
   color: #e0245e; }
-  .fa-heart:hover {
+  .fa-heart:hover, .fa-heart:focus {
     animation: pulse 1s infinite;
     transform: scale(1);
     transition: all 0.5s ease-out; }

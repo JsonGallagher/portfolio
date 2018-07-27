@@ -179,7 +179,8 @@ img {
 .fa-heart {
   color: #e0245e;
 
-  &:hover {
+  &:hover,
+  &:focus {
     animation: pulse 1s infinite;
     transform: scale(1);
     @include easeOut;
@@ -191,7 +192,5 @@ img {
 transform: scale(.5); }
 }
 
-
-
-
+//Import mobile responsiveness styles
 @import 'mobile';
