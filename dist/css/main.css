@@ -148,7 +148,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 30px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -227,10 +227,24 @@ img {
 
 #main-footer {
   text-align: center;
-  padding: 1rem;
+  padding: .5rem 0;
   background: #1a1a1a;
   color: #fff;
-  height: 60px; }
+  height: 30px;
+  font-size: 0.75rem;
+  font-weight: 100; }
+
+.fa-heart {
+  color: #e0245e; }
+  .fa-heart:hover {
+    animation: pulse 1s infinite;
+    transform: scale(1);
+    transition: all 0.5s ease-out; }
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+    transform: scale(0.5); } }
 
 @media screen and (min-width: 1171px) {
   .projects {
