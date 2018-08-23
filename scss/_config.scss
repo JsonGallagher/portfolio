@@ -1,7 +1,7 @@
 $primary-color: #333;
 $secondary-color: #46a0f5;
 $show-home-image: true;
-$home-image: url(../img/background2.jpg);
+$home-image: url(../img/connectwork.png);
 $background-opacity: 0.7;
 
 //Ease Out transition variable declaration
@@ -15,7 +15,7 @@ $background-opacity: 0.7;
     &#bg-img {
       background: $home-image;
       background-attachment: fixed;
-      background-size: cover;
+      background-size: tile;
 
       &:after {
         content:"";

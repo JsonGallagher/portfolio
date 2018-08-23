@@ -108,9 +108,9 @@ body {
   line-height: 1.5;
   border-top: 3px solid rgba(70, 160, 245, 0.5); }
   body#bg-img {
-    background: url(../img/background2.jpg);
+    background: url(../img/connectwork.png);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: tile; }
     body#bg-img:after {
       content: "";
       position: absolute;
