@@ -105,7 +105,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  border-top: 5px solid yellow; }
   body#bg-img {
     background: url(../img/background2.jpg);
     background-attachment: fixed;
