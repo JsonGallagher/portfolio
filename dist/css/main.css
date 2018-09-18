@@ -16,7 +16,7 @@
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
-      background: #0066ff; }
+      background: #4d94ff; }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
@@ -42,14 +42,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rgba(28, 28, 28, 0.9);
+    background: #1a1a1a;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: rgba(51, 51, 51, 0.9);
+    background-image: linear-gradient(327deg, #0066ff 0%, #ff006a 90%);
     transform: translate3d(-100%, 0, 0);
     opacity: 1;
     transition: all 0.5s ease-out; }
@@ -60,14 +60,14 @@
       height: 250px;
       background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 3px #0066ff; }
+      border: solid 3px #4d94ff; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #0066ff; }
+      color: #4d94ff; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -108,8 +108,6 @@ body {
   line-height: 1.5;
   border-top: 3px solid #333; }
   body#bg-img {
-    background-image: -webkit-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
-    background-image: -o-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
     background-image: linear-gradient(147deg, #0066ff 0%, #ff006a 90%); }
     body#bg-img:after {
       content: "";
@@ -118,8 +116,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
-      background: rgba(51, 51, 51, 0.1); }
+      z-index: -1; }
 
 h1,
 h2,

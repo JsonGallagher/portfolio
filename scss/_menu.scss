@@ -24,7 +24,7 @@
       //line 1 - Rotate
         &:nth-child(1) {
           transform: rotate(45deg) translate(5px, 5px);
-          background: $secondary-color;
+          background: $light-secondary-color;
         }
       //line 2 - Hide
         &:nth-child(2) {
@@ -65,7 +65,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: rgba(darken($primary-color, 9), 0.9);
+    background: darken($primary-color, 10);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     @include easeOut;
@@ -77,7 +77,7 @@
   }
   // Branding Side
   &-branding {
-    background: rgba($primary-color, 0.9);
+    background-image: linear-gradient(327deg, #0066ff 0%, #ff006a 90%);
     transform: translate3d(-100%, 0, 0);
     opacity: 1;
     @include easeOut;
@@ -92,7 +92,7 @@
       height:250px;
       background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 3px $secondary-color;
+      border: solid 3px $light-secondary-color;
     }
   }
   .nav-item {
@@ -105,7 +105,7 @@
   }
 
   &.current > a {
-    color: $secondary-color;
+    color: $light-secondary-color;
   }
 }
   .nav-link {

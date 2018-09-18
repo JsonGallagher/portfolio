@@ -1,6 +1,7 @@
 $primary-color: #333;
 $secondary-color: #0066ff;
 $tertiary-color: #ff006a;
+$light-secondary-color: lighten($secondary-color, 15%);
 $show-home-image: true;
 $home-image: url(../img/connectwork.png);
 $background-opacity: .1;
@@ -14,9 +15,7 @@ $background-opacity: .1;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-    background-image: -webkit-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
-    background-image: -o-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
-    background-image: linear-gradient(147deg, #0066ff 0%, #ff006a 90%);
+          background-image: linear-gradient(147deg, #0066ff 0%, #ff006a 90%);
 
           &:after {
             content:"";
@@ -27,7 +26,7 @@ $background-opacity: .1;
             height: 100%;
             z-index: -1;
             // background darkening overlay
-            background: rgba($primary-color, $background-opacity);
+            // background: rgba($primary-color, $background-opacity);
           }
         }
   }
