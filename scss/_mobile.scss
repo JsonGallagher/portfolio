@@ -50,7 +50,7 @@
       height: 150px;
     }
   }
-  
+
   .about-info {
     grid-template-areas:
     'bioimage'
@@ -72,6 +72,12 @@
     margin-top: 10vh;
   }
 
+  h1.lg-heading {
+    font-size: 4rem;
+  }
+  #main-footer {
+    font-size: .5rem;
+  }
   .projects {
     grid-template-columns: 1fr;
   }
