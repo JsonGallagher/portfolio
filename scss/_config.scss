@@ -1,8 +1,9 @@
 $primary-color: #333;
-$secondary-color: #46a0f5;
+$secondary-color: #0066ff;
+$tertiary-color: #ff006a;
 $show-home-image: true;
 $home-image: url(../img/connectwork.png);
-$background-opacity: 0.7;
+$background-opacity: .1;
 
 //Ease Out transition variable declaration
 @mixin easeOut {
@@ -13,21 +14,22 @@ $background-opacity: 0.7;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: tile;
+    background-image: -webkit-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
+    background-image: -o-linear-gradient(57deg, #0066ff 0%, #ff006a 90%);
+    background-image: linear-gradient(147deg, #0066ff 0%, #ff006a 90%);
 
-      &:after {
-        content:"";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
-    }
+          &:after {
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            // background darkening overlay
+            background: rgba($primary-color, $background-opacity);
+          }
+        }
   }
 }
 
