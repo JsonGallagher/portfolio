@@ -1,5 +1,5 @@
 $primary-color: #333;
-$secondary-color: #0066ff;
+$secondary-color: #06f;
 $tertiary-color: #ff006a;
 $light-secondary-color: lighten($secondary-color, 15%);
 $show-home-image: true;
@@ -15,7 +15,7 @@ $background-opacity: .1;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-          background-image: linear-gradient(147deg, #0066ff 0%, #ff006a 90%);
+          background-image: linear-gradient(147deg, $secondary-color 0%, $tertiary-color 90%);
 
           &:after {
             content:"";
