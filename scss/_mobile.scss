@@ -1,5 +1,10 @@
 // Wide screens
 @include mediaXl {
+  main {
+    .lg-heading {
+      font-size: 7rem;
+    }
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -16,11 +21,11 @@
 @include mediaMd {
   main {
     align-items: center;
-    text-align: center;
 
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
+      font-size: 5rem;
     }
   }
 
@@ -75,9 +80,11 @@
   h1.lg-heading {
     font-size: 4rem;
   }
+
   #main-footer {
-    font-size: .5rem;
+    font-size: .6rem;
   }
+
   .projects {
     grid-template-columns: 1fr;
   }
