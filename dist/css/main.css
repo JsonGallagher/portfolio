@@ -168,7 +168,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #06f;
+        color: #4d94ff;
         transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
@@ -225,7 +225,7 @@ main {
     margin-bottom: 3rem;
     transition: all 0.3s ease-out; }
     .boxes div:hover {
-      background: #06f;
+      background: #4d94ff;
       color: #F5F5F5; }
       .boxes div:hover span {
         color: #F5F5F5; }
@@ -310,7 +310,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage'g 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

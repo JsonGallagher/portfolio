@@ -82,7 +82,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $light-secondary-color;
         @include easeOut();
       }
     }
@@ -166,7 +166,7 @@ main {
     @include easeOut;
 
     &:hover {
-      background: $secondary-color;
+      background: $light-secondary-color;
       color: #F5F5F5;
 
       span {
