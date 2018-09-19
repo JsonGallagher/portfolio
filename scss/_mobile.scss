@@ -24,7 +24,7 @@
 
     .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; 
+      margin-bottom: 1rem;
       font-size: 5rem;
     }
   }
@@ -88,4 +88,19 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  //adjust heading sizes on mobile
+  div.bio {
+    font-size: 1rem;
+  }
+
+  div h3 {
+    font-size: 1.5rem;
+  }
+
+  div h4 {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
 }

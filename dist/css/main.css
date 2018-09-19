@@ -324,4 +324,11 @@ main {
   #main-footer {
     font-size: .6rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  div.bio {
+    font-size: 1rem; }
+  div h3 {
+    font-size: 1.5rem; }
+  div h4 {
+    font-weight: 600;
+    font-size: 1rem; } }
