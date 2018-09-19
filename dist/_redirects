@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://gradient-portfolio.netlify.com/* https://www.jasongallagher.co/:splat 301!
