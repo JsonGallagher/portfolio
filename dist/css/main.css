@@ -225,7 +225,6 @@ main {
     margin-bottom: 3rem;
     transition: all 0.3s ease-out; }
     .boxes div:hover {
-      padding: 1rem 2rem;
       background: #06f;
       color: #F5F5F5; }
       .boxes div:hover span {
