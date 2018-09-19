@@ -127,7 +127,8 @@ h2 {
   h2.lg-heading {
     font-family: 'Fjalla One', sans-serif;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 6rem; }
+    font-size: 6rem;
+    margin-bottom: 1rem; }
   h1.sm-heading,
   h2.sm-heading {
     margin-bottom: 2rem;
@@ -145,7 +146,7 @@ h4 {
   font-weight: 300; }
 
 div h4 {
-  margin-top: .5rem; }
+  margin: 0; }
 
 a {
   color: #fff;
@@ -218,19 +219,19 @@ main {
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 2px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.3s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 1rem 2rem;
       background: #06f;
-      color: #000; }
+      color: #F5F5F5; }
       .boxes div:hover span {
-        color: #000; }
+        color: #F5F5F5; }
       .boxes div:hover a {
-        color: #000; }
+        color: #F5F5F5; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -288,7 +289,6 @@ main {
   main {
     align-items: center; }
     main .lg-heading {
-      line-height: 1;
       margin-bottom: 1rem;
       font-size: 5rem; }
   ul.menu-nav,
@@ -331,4 +331,6 @@ main {
     font-size: 1.5rem; }
   div h4 {
     font-weight: 600;
+    font-size: 1rem; }
+  .boxes div {
     font-size: 1rem; } }
