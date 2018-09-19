@@ -161,8 +161,8 @@ header {
   color: #4d94ff; }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 30px); }
+  padding: 3rem;
+  min-height: calc(100vh - 33px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
