@@ -332,4 +332,6 @@ main {
     font-weight: 600;
     font-size: 1rem; }
   .boxes div {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .bio-image {
+    width: 50%; } }

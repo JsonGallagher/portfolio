@@ -88,7 +88,7 @@
     grid-template-columns: 1fr;
   }
 
-  //adjust heading sizes on mobile
+//adjust heading sizes on mobile
   div.bio {
     font-size: 1rem;
   }
@@ -105,5 +105,8 @@
 .boxes div {
   font-size: 1rem;
 }
-
+//Make bio image take up less space on mobile.
+  .bio-image {
+    width: 50%;
+  }
 }
