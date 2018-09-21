@@ -42,7 +42,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #010101;
+    background: #272727;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.3s ease-out; }
@@ -101,7 +101,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #1a1a1a;
+  background: #272727;
   color: #F5F5F5;
   height: 100%;
   margin: 0;
@@ -190,7 +190,11 @@ main {
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  transition: all .2s ease; }
+  .bio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
 
 .job-1 {
   grid-area: job1; }
@@ -211,6 +215,9 @@ main {
   padding: 1.5rem;
   border-bottom: #4d94ff 5px solid;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+  .job:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
 
 .boxes {
   display: flex;
@@ -252,7 +259,7 @@ main {
 #main-footer {
   text-align: center;
   padding: .5rem 0;
-  background: #010101;
+  background: #1a1a1a;
   color: #F5F5F5;
   height: 30px;
   font-size: 0.75rem;
