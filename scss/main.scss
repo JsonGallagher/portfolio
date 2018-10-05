@@ -170,7 +170,7 @@ main {
   margin-top: 1rem;
 
   div {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     border: 2px #fff solid;
     padding: 1rem;
     margin-bottom: 3rem;
@@ -191,6 +191,10 @@ main {
   }
 }
 
+.boxes .contactBoxes__email,
+.boxes .contactBoxes__phone {
+  font-size: 2rem;
+}
 
 //Button styles
 .btn {

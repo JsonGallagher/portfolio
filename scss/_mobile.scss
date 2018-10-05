@@ -5,19 +5,20 @@
       font-size: 7rem;
     }
   }
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .bio,
+  .job {
+    font-size: 1.25rem;
+    }
 }
+
 
 // Desktops and Laptops
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
 
-// Tablets & Small Laptops
+
+// Tablets & Small Laptops - (max-width: 768px)
 @include mediaMd {
   main {
     align-items: center;
@@ -44,6 +45,7 @@
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
+
   .menu-branding {
     height: 35vh;
     transform: translate3d(100%, 0 0);
@@ -65,12 +67,16 @@
     grid-template-columns: 1fr;
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  //Medium sized contact boxes on tablets
+    .boxes .contactBoxes__email,
+    .boxes .contactBoxes__phone {
+      font-size: 1.5rem;
+    }
 }
 
-// Smallest screens
+
+
+// Mobile - (max-width: 500px)
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
@@ -85,16 +91,14 @@
     font-size: .6rem;
   }
 
-  .projects {
-    grid-template-columns: 1fr;
-  }
+  //Make bio image take up less space on mobile
+    .bio-image {
+      width: 50%;
+    }
 
-//Make bio image take up less space on mobile.
-  .bio-image {
-    width: 50%;
-  }
-}
-
-.boxes div {
-
+  //Smallest contact boxes on mobile
+    .boxes .contactBoxes__email,
+    .boxes .contactBoxes__phone {
+      font-size: 1rem;
+    }
 }
