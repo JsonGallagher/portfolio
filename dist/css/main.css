@@ -122,7 +122,8 @@ body {
 h1,
 h2 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 600;
+  line-height: 1.25; }
   h1.lg-heading,
   h2.lg-heading {
     font-family: 'Fjalla One', sans-serif;
@@ -136,14 +137,16 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 600; }
+  line-height: 1.25;
+  color: #4d94ff; }
 
 div h3 {
   margin: 0; }
 
 h4 {
   font-size: 1.25rem;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.25; }
 
 div h4 {
   margin: 0; }
@@ -190,8 +193,8 @@ main {
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  padding: 1rem; }
   .bio:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
@@ -306,11 +309,11 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 70vh;
+    height: 65vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .menu-branding {
-    height: 30vh;
+    height: 35vh;
     transform: translate3d(100%, 0 0); }
     .menu-branding .portrait {
       background: url("../img/portrait_small.jpg");
@@ -326,19 +329,11 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   h1.lg-heading {
-    font-size: 4rem; }
+    font-size: 3rem;
+    font-weight: normal; }
   #main-footer {
     font-size: .6rem; }
   .projects {
     grid-template-columns: 1fr; }
-  div.bio {
-    font-size: 1rem; }
-  div h3 {
-    font-size: 1.5rem; }
-  div h4 {
-    font-weight: 600;
-    font-size: 1rem; }
-  .boxes div {
-    font-size: 1rem; }
   .bio-image {
     width: 50%; } }

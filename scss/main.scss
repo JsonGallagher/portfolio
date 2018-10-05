@@ -20,7 +20,8 @@ body {
 h1,
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
+  line-height: 1.25;
 
   &.lg-heading {
     font-family: 'Fjalla One', sans-serif;
@@ -37,7 +38,8 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 600;
+  line-height: 1.25;
+  color: $light-secondary-color;
 }
 div h3 {
   margin: 0;
@@ -46,6 +48,7 @@ div h3 {
 h4 {
   font-size: 1.25rem;
   font-weight: 300;
+  line-height: 1.25;
 }
 
 div h4 {
@@ -120,8 +123,8 @@ main {
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem;
   transition: all .2s ease;
+  padding: 1rem;
 
   &:hover {
   transform: translateY(-2px);
