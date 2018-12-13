@@ -73,7 +73,7 @@ header {
 
 main {
   padding: 3rem;
-  min-height: calc(100vh - 33px);
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -226,8 +226,7 @@ main {
   padding: .5rem 0;
   background: $primary-color;
   color: set-text-color($primary-color);
-  height: 30px;
-  font-size: 0.75rem;
+  height: 60px;
   font-weight: 100;
 }
 
