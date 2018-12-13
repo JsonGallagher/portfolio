@@ -222,8 +222,9 @@ main {
 }
 
 #main-footer {
+  font-size: .7rem;
   text-align: center;
-  padding: .5rem 0;
+  padding: .7rem 0;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 60px;

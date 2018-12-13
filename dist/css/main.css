@@ -262,8 +262,9 @@ main {
   color: #333; }
 
 #main-footer {
+  font-size: .7rem;
   text-align: center;
-  padding: .5rem 0;
+  padding: .7rem 0;
   background: #1a1a1a;
   color: #F5F5F5;
   height: 60px;
@@ -290,7 +291,19 @@ main {
     font-size: 7rem; }
   .bio,
   .job {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem; }
+  main {
+    min-height: calc(100vh - 40px); }
+  #main-footer {
+    font-size: 1rem;
+    height: 40px; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main {
+    min-height: calc(100vh - 40px); }
+  #main-footer {
+    font-size: .8rem;
+    height: 40px; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -322,7 +335,11 @@ main {
     grid-template-columns: 1fr; }
   .boxes .contactBoxes__email,
   .boxes .contactBoxes__phone {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  main {
+    min-height: calc(100vh - 40px); }
+  #main-footer {
+    height: 40px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -330,10 +347,12 @@ main {
   h1.lg-heading {
     font-size: 3rem;
     font-weight: normal; }
-  #main-footer {
-    font-size: .8rem; }
   .bio-image {
     width: 50%; }
   .boxes .contactBoxes__email,
   .boxes .contactBoxes__phone {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  main {
+    min-height: calc(100vh - 60px); }
+  #main-footer {
+    height: 60px; } }
