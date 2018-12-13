@@ -85,12 +85,13 @@
     </script>
   </footer>
   <script src="js/main.js"></script>
-  <div itemscope itemtype="http://schema.org/ProfessionalService">
   <script type="application/ld+json">
   {
     "@context" : "http://schema.org",
     "@type" : "ProfessionalService",
     "name" : "Jason Gallagher",
+    "image": "https://www.jasongallagher.co/img/portrait.jpg",
+    "description": "Full Service Marketing Specialist and Web Developer.",
     "telephone": "+17198001626",
     "email": "jason@jasongallagher.co",
     "url" : "https://www.jasongallagher.co",
@@ -100,7 +101,12 @@
       "https://twitter.com/jsongallagher",
       "https://www.linkedin.com/in/jsongallagher"
     ],
-    "priceRange" : "$"
+    "priceRange" : "$",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+17198001626",
+      "contactType": "Sales"
+    }
   }
   </script>
 </body>
