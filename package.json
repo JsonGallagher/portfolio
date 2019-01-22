@@ -11,6 +11,7 @@
   "author": "Jason Gallagher",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^5.12.1",
     "gh-pages": "^1.2.0",
     "node-sass": "^4.9.3",
     "sass": "^1.14.0"
