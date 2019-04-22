@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <title>About Me</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71952294-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-71952294-1');
+  </script>
 </head>
 
 <body>
@@ -23,23 +32,18 @@
         <div class="portrait"></div>
       </div>
       <ul class="menu-nav">
-        <li class="nav-item ">
+        <li class="nav-item current">
           <a href="index.html" class="nav-link">
             Home
           </a>
         </li>
-        <li class="nav-item current">
+        <li class="nav-item">
           <a href="about.html" class="nav-link">
             About
           </a>
         </li>
         <li class="nav-item">
-          <a href="work.html" class="nav-link">
-            Work
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="resume.html" class="nav-link">
+          <a href="http://bit.ly/resumePDF_Jan2019" class="nav-link">
             Resume
           </a>
         </li>
@@ -51,41 +55,57 @@
       </ul>
     </nav>
   </header>
-
   <main id="about">
     <h1 class="lg-heading">About <span class="text-secondary">Me</span>
     </h1>
-    <h2 class="sm-heading">A few things about myself...</h2>
     <div class="about-info">
       <img src="img/portrait.jpg" alt="Jason Gallagher" class="bio-image">
       <div class="bio">
-        <h3 class="text-secondary">Bio</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae provident consequatur, soluta ab consequuntur numquam rerum accusamus, voluptate reiciendis nobis at iure. Cumque ducimus consequuntur reprehenderit repellat hic saepe explicabo!</p>
+        <h2 class="text-secondary">Professional Summary</h3>
+        <p>Full-time marketing director (5+ yrs) & freelance web developer (3+ yrs) with extensive sales experience (6 yrs - Retail, B2B & Management). Born in Rochester, New York, currently living in Colorado Springs, Colorado. Passionate about improving user experiences on the web and learning about emerging technologies. Exploring new opportunities, on-site or remote.</p>
       </div>
       <div class="job job-1">
-        <h3>123 Webshop</h3>
-        <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt molestias vero, quam, quaerat omnis dolores alias aliquid accusamus quidem! Voluptatem.</p>
+        <h3>Bershire Hathaway HomeServices Rocky Mountain, Realtors</h3>
+        <h4>Marketing Director - 5+ years</h4>
+        <p>Master of all things marketing at a multi-million dollar real estate franchise.</p>
       </div>
       <div class="job job-2">
-        <h3>Designers ABC</h3>
-        <h6>Designer</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt molestias vero, quam, quaerat omnis dolores alias aliquid accusamus quidem! Voluptatem.</p>
+        <h3>Freelance/Remote</h3>
+        <h4>Web Developer - 3+ years</h4>
+        <p>Making the web more enjoyable & accessible one line of code at a time.</p>
       </div>
       <div class="job job-3">
-        <h3>Webworks</h3>
-        <h6>Graphic Designer</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt molestias vero, quam, quaerat omnis dolores alias aliquid accusamus quidem! Voluptatem.</p>
+        <h3>MarketPeak</h3>
+        <h4>Consultant/Digital Marketing Specialist - 3+ years</h4>
+        <p>Freelance digital marketing specialist and consultant dedicated to helping small to medium businesses grow and thrive.</p>
       </div>
     </div>
   </main>
-  <footer id="main-footer">
-    This website was handcrafted with <i class="fas fa-heart"></i> by Jason Gallagher, Copyright &copy
-    <script type="text/javascript">
-      document.write(new Date().getFullYear());
-    </script>
-  </footer>
   <script src="js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "ProfessionalService",
+    "name" : "Jason Gallagher",
+    "image": "https://www.jasongallagher.co/img/portrait.jpg",
+    "description": "Full Service Marketing Specialist and Web Developer.",
+    "telephone": "+17198001626",
+    "email": "jason@jasongallagher.co",
+    "url" : "https://www.jasongallagher.co",
+    "sameAs" : [
+      "https://www.facebook.com/jsongallagher",
+      "https://www.instagram.com/jsongallagher",
+      "https://twitter.com/jsongallagher",
+      "https://www.linkedin.com/in/jsongallagher"
+    ],
+    "priceRange" : "$",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+17198001626",
+      "contactType": "Sales"
+    }
+  }
+  </script>
 </body>
 
 </html>

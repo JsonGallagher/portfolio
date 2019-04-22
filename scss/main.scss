@@ -7,36 +7,61 @@
 
 body {
   @include background;
-  background: $primary-color;
+  background: lighten($primary-color, 5%);
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.5;
+  border-top: 3px solid $primary-color;
 }
 
 //Heading styles
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
+  line-height: 1.25;
 
   &.lg-heading {
     font-family: 'Fjalla One', sans-serif;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
     font-size: 6rem;
+    margin-bottom: 1rem;
   }
 
   &.sm-heading {
   margin-bottom: 2rem;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   }
 }
 
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: $light-secondary-color;
+}
+
+div h3 {
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+<<<<<<< HEAD
+=======
+div h4 {
+  margin-top: .25rem;
+}
 
 a {
-    color: #fff;
-    text-decoration: none;
-  }
+  color: #fff;
+  text-decoration: none;
+}
+>>>>>>> 61dea914deae72ce8e3b2f3ae6f2c105dbc254ca
 
 
 header {
@@ -46,25 +71,26 @@ header {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $light-secondary-color;
 }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 30px);
+  padding: 3rem;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding-right: 0.6rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $light-secondary-color;
         @include easeOut();
       }
     }
   }
+
 
   &#home {
     overflow: hidden;
@@ -74,6 +100,7 @@ main {
     }
   }
 }
+
 
 //Define grid template areas
 .about-info {
@@ -90,12 +117,19 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: $secondary-color 3px solid;
+  border: $light-secondary-color 3px solid;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
 }
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem;
+  transition: all .2s ease;
+  padding: 1rem;
+
+  &:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3)
+  }
 }
 
 .job-1 {
@@ -109,35 +143,27 @@ main {
 .job-3 {
   grid-area: job3;
 }
-//style job backgrounds
+
+//style bio cards
+.bio {
+  background: lighten($primary-color, 20%);
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+//style job cards
 .job {
-  background: lighten($primary-color, 5);
-  padding: 0.5rem;
-  border-bottom: $secondary-color 5px solid;
-}
-
-//Style the Work/Projects page
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-//Style project images - box shadow is material design based
-img {
-  width: 100%;
-  border: 1px solid #dddfe2;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background: lighten($primary-color, 20%);
+  padding: 1.5rem;
+  border-bottom: $light-secondary-color 5px solid;
+  box-shadow: 0 4px 6px rgba(0,0,0,.11), 0 1px 3px rgba(0,0,0,.08);
 
   &:hover {
-    opacity: 0.5;
-    border-color: $secondary-color;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    @include easeOut;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3)
   }
 }
+
 //Style the contact page
 .boxes {
   display: flex;
@@ -147,28 +173,31 @@ img {
   margin-top: 1rem;
 
   div {
-    font-size: 2rem;
+    // font-size: 1.5rem;
     border: 2px #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem;
     margin-bottom: 3rem;
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
+      background: $light-secondary-color;
+      color: #F5F5F5;
 
       span {
-        color: set-text-color($secondary-color);
+        color: #F5F5F5;
       }
 
       a {
-        color: set-text-color($secondary-color);
+        color: #F5F5F5;
       }
     }
   }
 }
 
+.boxes .contactBoxes__email,
+.boxes .contactBoxes__phone {
+  font-size: 2rem;
+}
 
 //Button styles
 .btn {
@@ -196,13 +225,18 @@ img {
 }
 
 #main-footer {
+  font-size: .7rem;
   text-align: center;
-  padding: .5rem 0;
-  background: darken($primary-color, 10);
+  padding: .7rem 0;
+  background: $primary-color;
   color: set-text-color($primary-color);
-  height: 30px;
-  font-size: 0.75rem;
+  height: 60px;
   font-weight: 100;
+}
+
+//Style Font Awesome Social Icons
+.fab {
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
 
 //Heart effects

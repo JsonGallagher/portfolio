@@ -1,26 +1,44 @@
 // Wide screens
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  main {
+    .lg-heading {
+      font-size: 7rem;
+    }
   }
+  .bio,
+  .job {
+    font-size: 1.25rem;
+    }
+    main {
+      min-height: calc(100vh - 40px);
+    }
+    #main-footer {
+      font-size: 1rem;
+      height: 40px;
+    }
 }
+
 
 // Desktops and Laptops
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
+  main {
+    min-height: calc(100vh - 40px);
+  }
+  #main-footer {
+    font-size: .8rem;
+    height: 40px;
   }
 }
 
-// Tablets & Small Laptops
+
+// Tablets & Small Laptops - (max-width: 768px)
 @include mediaMd {
   main {
     align-items: center;
-    text-align: center;
 
     .lg-heading {
-      line-height: 1;
       margin-bottom: 1rem;
+      font-size: 5rem;
     }
   }
 
@@ -36,12 +54,13 @@
   }
 
   .menu-nav {
-    height: 75vh;
+    height: 65vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
+
   .menu-branding {
-    height: 25vh;
+    height: 35vh;
     transform: translate3d(100%, 0 0);
 
     .portrait {
@@ -50,7 +69,7 @@
       height: 150px;
     }
   }
-  
+
   .about-info {
     grid-template-areas:
     'bioimage'
@@ -61,18 +80,46 @@
     grid-template-columns: 1fr;
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  //Medium sized contact boxes on tablets
+    .boxes .contactBoxes__email,
+    .boxes .contactBoxes__phone {
+      font-size: 1.5rem;
+    }
+    main {
+      min-height: calc(100vh - 40px);
+    }
+    #main-footer {
+      height: 40px;
+    }
 }
 
-// Smallest screens
+
+
+// Mobile - (max-width: 500px)
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
   }
 
-  .projects {
-    grid-template-columns: 1fr;
+  h1.lg-heading {
+    font-size: 3rem;
+    font-weight: normal;
   }
+
+  //Make bio image take up less space on mobile
+    .bio-image {
+      width: 50%;
+    }
+
+  //Smallest contact boxes on mobile
+    .boxes .contactBoxes__email,
+    .boxes .contactBoxes__phone {
+      font-size: 1rem;
+    }
+    main {
+      min-height: calc(100vh - 60px);
+    }
+    #main-footer {
+      height: 60px;
+    }
 }
