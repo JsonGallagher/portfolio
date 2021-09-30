@@ -179,9 +179,10 @@ main {
       margin-top: 20vh; }
 
 .about-info {
+
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-image {
@@ -204,6 +205,9 @@ main {
 
 .job-2 {
   grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
 
 .bio {
   background: #4d4d4d;
@@ -312,7 +316,6 @@ main {
   ul.menu-nav,
   div.menu-branding {
     float: none;
-    width: 100%;
     min-height: 0; }
     ul.menu-nav.show,
     div.menu-branding.show {
