@@ -7,13 +7,11 @@
 
 body {
   @include background;
-  background: lighten($primary-color, 5%);
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.5;
-  border-top: 3px solid $primary-color;
 }
 
 //Heading styles
