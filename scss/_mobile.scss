@@ -95,15 +95,21 @@
 
 
 
-// Mobile - (max-width: 500px)
+// Mobile - (max-width: 555px)
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
   }
 
   h1.lg-heading {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: normal;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: .9rem;
   }
 
   //Make bio image take up less space on mobile
