@@ -59,6 +59,10 @@ div h4 {
 a {
   color: #fff;
   text-decoration: none;
+  &:hover {
+    color: $light-secondary-color;
+    @include easeOut();
+  }
 }
 
 

@@ -154,6 +154,9 @@ div h4 {
 a {
   color: #fff;
   text-decoration: none; }
+  a:hover {
+    color: #4d94ff;
+    transition: all 0.3s ease-out; }
 
 header {
   position: fixed;
