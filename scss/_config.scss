@@ -3,7 +3,6 @@ $secondary-color: #06f;
 $tertiary-color: #ff006a;
 $light-secondary-color: lighten($secondary-color, 15%);
 $show-home-image: true;
-$background-opacity: .1;
 
 //Ease Out transition variable declaration
 @mixin easeOut {
@@ -24,8 +23,6 @@ $background-opacity: .1;
           width: 100%;
           height: 100%;
           z-index: -1;
-          //background darkening overlay
-          background: rgba($primary-color, $background-opacity);
         }
       }
   }
