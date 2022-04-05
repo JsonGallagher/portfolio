@@ -289,6 +289,9 @@ main {
     transform: scale(0.75); } }
 
 @media screen and (min-width: 1171px) {
+  .menu .nav-link {
+    font-size: 1.5rem;
+  }
   main .lg-heading {
     font-size: 7rem; }
   .bio,
