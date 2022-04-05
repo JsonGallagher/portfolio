@@ -312,7 +312,7 @@ main {
 
 @media screen and (max-width: 768px) {
    .menu .nav-link {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   main {
     align-items: center; }
