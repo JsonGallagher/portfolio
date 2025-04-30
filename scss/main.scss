@@ -1,5 +1,6 @@
-@import 'config';
-@import 'menu';
+@use "sass:color";
+@use "config" as *;
+@use "menu" as *;
 
 * {
   box-sizing: border-box;
@@ -10,11 +11,11 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
 }
 
-//Heading styles
+// Heading styles
 h1,
 h2 {
   margin: 0;
@@ -22,15 +23,15 @@ h2 {
   line-height: 1.25;
 
   &.lg-heading {
-    font-family: 'Fjalla One', sans-serif;
-    text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
-    font-size: 6rem;
+    font-family: "Fjalla One", sans-serif;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 5rem;
     margin-bottom: 1rem;
   }
 
   &.sm-heading {
-  font-weight: 500;
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    font-weight: 500;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -51,18 +52,18 @@ h4 {
 }
 
 div h4 {
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
 a {
   color: #fff;
   text-decoration: none;
+
   &:hover {
     color: $light-secondary-color;
     @include easeOut();
   }
 }
-
 
 header {
   position: fixed;
@@ -91,7 +92,6 @@ main {
     }
   }
 
-
   &#home {
     overflow: hidden;
 
@@ -101,34 +101,48 @@ main {
   }
 }
 
-
-//Define grid template areas
+// Grid layout for about section
 .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-  'bioimage bio bio'
-  'job1 job2 job3';
+    "bioimage bio bio"
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 }
 
-//define page sections and corresponding grid areas
+// Bio image
 .bio-image {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
   border: $light-secondary-color 3px solid;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+// Bio and job cards
 .bio {
   grid-area: bio;
-  transition: all .2s ease;
-  padding: 1rem;
+  transition: all 0.2s ease;
+  padding: 2rem;
+  background: color.adjust($primary-color, $lightness: 20%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
   &:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3)
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.job {
+  background: color.adjust($primary-color, $lightness: 20%);
+  padding: 1.5rem;
+  border-bottom: $light-secondary-color 5px solid;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -144,27 +158,7 @@ main {
   grid-area: job3;
 }
 
-//style bio cards
-.bio {
-  background: lighten($primary-color, 20%);
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,.11), 0 1px 3px rgba(0,0,0,.08);
-}
-
-//style job cards
-.job {
-  background: lighten($primary-color, 20%);
-  padding: 1.5rem;
-  border-bottom: $light-secondary-color 5px solid;
-  box-shadow: 0 4px 6px rgba(0,0,0,.11), 0 1px 3px rgba(0,0,0,.08);
-
-  &:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3)
-  }
-}
-
-//Style the contact page
+// Contact boxes
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +167,6 @@ main {
   margin-top: 1rem;
 
   div {
-    // font-size: 1.5rem;
     border: 2px #fff solid;
     padding: 1rem;
     margin-bottom: 3rem;
@@ -181,14 +174,11 @@ main {
 
     &:hover {
       background: $light-secondary-color;
-      color: #F5F5F5;
+      color: #f5f5f5;
 
-      span {
-        color: #F5F5F5;
-      }
-
+      span,
       a {
-        color: #F5F5F5;
+        color: #f5f5f5;
       }
     }
   }
@@ -199,8 +189,8 @@ main {
   font-size: 2rem;
 }
 
-//Button styles
-.btn {
+// Button base mixin
+@mixin btn-base {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
@@ -212,51 +202,53 @@ main {
   }
 }
 
+.btn {
+  @include btn-base;
+}
+
 .btn-dark {
-  @extend .btn;
-    background: darken($primary-color, 50);
-    color: #fff;
+  @include btn-base;
+  background: color.adjust($primary-color, $lightness: -50%);
+  color: #fff;
 }
 
 .btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
+  @include btn-base;
+  background: color.adjust($primary-color, $lightness: 50%);
   color: #333;
 }
 
 #main-footer {
-  font-size: .7rem;
+  font-size: 0.75rem;
   text-align: center;
-  padding: .7rem 0;
+  padding: 0.7rem 0;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 60px;
   font-weight: 100;
 }
 
-//Style Font Awesome Social Icons
+// Font Awesome icons
 .fab {
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-//Heart effects
+// Heart animation
 .fa-heart {
   color: #e0245e;
   padding: 0 2px;
 
   &:hover,
   &:focus {
-    animation: pulse .75s infinite;
+    animation: pulse 0.75s infinite;
     transform: scale(1.5);
     @include easeOut;
   }
 }
 
 @keyframes pulse {
-0% { box-shadow: 0 0 0 0 var(--hover);
-transform: scale(.75);
- }
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+    transform: scale(0.75);
+  }
 }
-
-//Import mobile responsiveness styles
-@import 'mobile';

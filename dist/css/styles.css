@@ -1,0 +1,18 @@
+/* Error: @use rules must be written before any other rules.
+ *     ,
+ * 256 | @use "mobile" as *;
+ *     | ^^^^^^^^^^^^^^^^^^
+ *     '
+ *   scss/main.scss 256:1  @use
+ *   scss/styles.scss 4:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: @use rules must be written before any other rules.\a     \2577 \a 256 \2502  @use "mobile" as *;\a     \2502  ^^^^^^^^^^^^^^^^^^\a     \2575 \a   scss/main.scss 256:1  @use\a   scss/styles.scss 4:1  root stylesheet';
+}
