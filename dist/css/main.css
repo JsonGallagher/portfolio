@@ -51,7 +51,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #181b11;
+  background: #161619;
   list-style: none;
   transform: translate3d(100%, 0, 0);
   transition: all 0.3s ease-out;
@@ -278,7 +278,7 @@ header {
   grid-area: bio;
   transition: all 0.2s ease;
   padding: 2rem;
-  background: #43492f;
+  background: #464d2a;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .bio:hover {
@@ -287,7 +287,7 @@ header {
 }
 
 .job {
-  background: #43492f;
+  background: #464d2a;
   padding: 1.5rem;
   border-bottom: #88a2d7 5px solid;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -382,7 +382,7 @@ header {
   border: 0;
   margin-bottom: 0.3rem;
   transition: all 0.2s ease;
-  background: #96a36e;
+  background: #9dab65;
   color: #333;
 }
 .btn-light:hover {
@@ -405,7 +405,7 @@ header {
   font-size: 0.75rem;
   text-align: center;
   padding: 0 1rem;
-  background: #0A0B07;
+  background: #0a0b06;
   color: #F8F8FF;
   height: 40px;
   font-weight: 100;

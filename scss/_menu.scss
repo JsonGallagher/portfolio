@@ -69,7 +69,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: color.adjust($primary-color, $lightness: 5%);
+    background: $primary-color;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     @include easeOut;
@@ -106,7 +106,7 @@
   }
   .nav-item {
     transform: translate3d(600px, 0, 0);
-    
+
     @include easeOut;
 
     &.show {
