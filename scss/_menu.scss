@@ -131,7 +131,7 @@
     &:hover,
     &:focus {
       color: $hover-link-color;
-      filter: drop-shadow(0 0 2px $hover-link-color);
+      filter: drop-shadow(0 0 1px $hover-link-color);
       outline: none;
     }
   

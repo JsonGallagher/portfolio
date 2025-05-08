@@ -98,16 +98,16 @@
   transition: all 0.3s ease-out;
 }
 .menu .nav-link:hover, .menu .nav-link:focus {
-  color: #FFD700;
-  filter: drop-shadow(0 0 2px #FFD700);
+  color: #EAC544;
+  filter: drop-shadow(0 0 1px #EAC544);
   outline: none;
 }
 .menu .nav-link:active {
-  color: #ffdf33;
+  color: #efd372;
   text-decoration: underline;
 }
 .menu .nav-link:focus {
-  outline: 2px dashed #FFD700;
+  outline: 2px dashed #EAC544;
   outline-offset: 4px;
 }
 
@@ -196,16 +196,16 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #FFD700;
-  filter: drop-shadow(0 0 2px #FFD700);
+  color: #EAC544;
+  filter: drop-shadow(0 0 1px #EAC544);
   transition: all 0.3s ease-out;
 }
 a:active {
-  color: #ffdf33;
+  color: #efd372;
   text-decoration: underline;
 }
 a:focus {
-  outline: 2px dashed #FFD700;
+  outline: 2px dashed #EAC544;
   outline-offset: 4px;
 }
 
@@ -222,16 +222,16 @@ main .icons a:last-child {
   margin-right: 0;
 }
 main .icons a:hover, main .icons a:focus {
-  color: #FFD700;
-  filter: drop-shadow(0 0 2px #FFD700);
+  color: #EAC544;
+  filter: drop-shadow(0 0 1px #EAC544);
 }
 main .icons a:active {
-  color: #ffdf33;
+  color: #efd372;
   transform: scale(0.95);
   filter: brightness(1.3);
 }
 main .icons a:focus {
-  outline: 2px dashed #FFD700;
+  outline: 2px dashed #EAC544;
   outline-offset: 4px;
 }
 main#home {
