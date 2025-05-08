@@ -214,21 +214,30 @@ main {
   padding: 4rem 2rem 2rem;
 }
 main .icons a {
+  display: inline-block;
   font-size: 2rem;
   margin-right: 1rem;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, filter 0.2s ease;
 }
 main .icons a:last-child {
   margin-right: 0;
+}
+main .icons a i {
+  transition: transform 0.2s ease;
 }
 main .icons a:hover, main .icons a:focus {
   color: #EAC544;
   filter: drop-shadow(0 0 1px #EAC544);
 }
+main .icons a:hover i, main .icons a:focus i {
+  transform: scale(1.05);
+}
 main .icons a:active {
   color: #efd372;
-  transform: scale(0.95);
   filter: brightness(1.3);
+}
+main .icons a:active i {
+  transform: scale(0.95);
 }
 main .icons a:focus {
   outline: 2px dashed #EAC544;

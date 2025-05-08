@@ -84,24 +84,36 @@ main {
   padding: 4rem 2rem 2rem;
 
   .icons a {
+    display: inline-block;
     font-size: 2rem;
     margin-right: 1rem;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, filter 0.2s ease;
   
     &:last-child {
       margin-right: 0;
+    }
+  
+    i {
+      transition: transform 0.2s ease;
     }
   
     &:hover,
     &:focus {
       color: $hover-link-color;
       filter: drop-shadow(0 0 1px $hover-link-color);
+  
+      i {
+        transform: scale(1.05);
+      }
     }
   
     &:active {
       color: lighten($hover-link-color, 10%);
-      transform: scale(0.95);
       filter: brightness(1.3);
+  
+      i {
+        transform: scale(0.95);
+      }
     }
   
     &:focus {
