@@ -19,7 +19,7 @@
 }
 .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
-  background: #2b4881;
+  background: #88a2d7;
 }
 .menu-btn.close .btn-line:nth-child(2) {
   opacity: 0;
@@ -73,7 +73,7 @@
   height: 250px;
   background: url(../img/portrait2.jpg);
   border-radius: 50%;
-  border: solid 3px #2b4881;
+  border: solid 3px #88a2d7;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .menu .nav-item {
@@ -84,7 +84,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #2b4881;
+  color: #88a2d7;
 }
 .menu .nav-link {
   display: inline-block;
@@ -252,7 +252,7 @@ header {
 }
 
 .text-secondary {
-  color: #2b4881;
+  color: #88a2d7;
 }
 
 .section, .boxes, .about-info {
@@ -270,7 +270,7 @@ header {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #2b4881 3px solid;
+  border: #88a2d7 3px solid;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -289,7 +289,7 @@ header {
 .job {
   background: #43492f;
   padding: 1.5rem;
-  border-bottom: #2b4881 5px solid;
+  border-bottom: #88a2d7 5px solid;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .job:hover {
@@ -322,7 +322,7 @@ header {
   transition: all 0.3s ease-out;
 }
 .boxes div:hover {
-  background: #2b4881;
+  background: #88a2d7;
   color: #f5f5f5;
 }
 .boxes div:hover span,
@@ -346,7 +346,7 @@ header {
   color: #F8F8FF;
 }
 .btn:focus {
-  outline: 2px dashed #2b4881;
+  outline: 2px dashed #88a2d7;
   outline-offset: 4px;
 }
 .btn:active {
@@ -368,7 +368,7 @@ header {
   color: #F8F8FF;
 }
 .btn-dark:focus {
-  outline: 2px dashed #2b4881;
+  outline: 2px dashed #88a2d7;
   outline-offset: 4px;
 }
 .btn-dark:active {
@@ -390,7 +390,7 @@ header {
   color: #F8F8FF;
 }
 .btn-light:focus {
-  outline: 2px dashed #2b4881;
+  outline: 2px dashed #88a2d7;
   outline-offset: 4px;
 }
 .btn-light:active {
@@ -464,7 +464,7 @@ header {
     transform: translate3d(0, 0, 0);
   }
   .menu-nav {
-    height: 65vh;
+    height: 65dvh;
     font-size: 24px;
     transform: translate3d(-100%, 0, 0);
   }

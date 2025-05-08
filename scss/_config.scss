@@ -7,7 +7,7 @@ $tertiary-color: #4b6cb7;
 $hover-link-color: #EAC544;
 
 // Derived color using modern color.adjust()
-$light-secondary-color: color.adjust($secondary-color, $lightness: 15%);
+$light-secondary-color: color.adjust($secondary-color, $lightness: 50%);
 
 // Toggle background image
 $show-home-image: true;
