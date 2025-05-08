@@ -2,12 +2,6 @@
 
 // ─── XL Screens ────────────────────────────────────────
 @include mediaXl {
-  main {
-    .lg-heading {
-      font-size: 5rem;
-    }
-  }
-
   .bio,
   .job {
     font-size: 1.25rem;
@@ -31,18 +25,9 @@
     align-items: center;
 
     .lg-heading {
-      font-size: 4rem;
       margin-bottom: 0.5rem;
       max-width: 90%;
     }
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  h3 {
-    font-size: 1rem;
   }
 
   .menu-nav,
@@ -95,20 +80,6 @@
     margin-top: 10vh;
   }
 
-  .lg-heading {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  h3 {
-    font-size: 0.9rem;
-  }
-
   .bio-image {
     width: 50%;
   }
@@ -118,8 +89,8 @@
     font-size: 1rem;
   }
 
-  .icons a {
-    font-size: 0.75rem;
+  main .icons a {
+    font-size: 1.5rem;
   }
 
   #main-footer {
@@ -130,4 +101,13 @@
 // ─── Shared Footer Styles (All < 768px) ───────────────
 #main-footer {
   height: 40px;
+}
+
+// ─── Global Heading Adjustments (fluid scaling) ───────
+h2.sm-heading {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
 }

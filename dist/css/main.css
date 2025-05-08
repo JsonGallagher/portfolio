@@ -379,9 +379,6 @@ header {
   }
 }
 @media screen and (min-width: 1171px) {
-  main .lg-heading {
-    font-size: 5rem;
-  }
   .bio,
   .job {
     font-size: 1.25rem;
@@ -400,15 +397,8 @@ header {
     align-items: center;
   }
   main .lg-heading {
-    font-size: 4rem;
     margin-bottom: 0.5rem;
     max-width: 90%;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  h3 {
-    font-size: 1rem;
   }
   .menu-nav,
   .menu-branding {
@@ -447,17 +437,6 @@ header {
   main#home h1 {
     margin-top: 10vh;
   }
-  .lg-heading {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  h2 {
-    font-size: 1.1rem;
-  }
-  h3 {
-    font-size: 0.9rem;
-  }
   .bio-image {
     width: 50%;
   }
@@ -465,8 +444,8 @@ header {
   .boxes .contactBoxes__phone {
     font-size: 1rem;
   }
-  .icons a {
-    font-size: 0.75rem;
+  main .icons a {
+    font-size: 1.5rem;
   }
   #main-footer {
     font-size: 0.7rem;
@@ -474,6 +453,14 @@ header {
 }
 #main-footer {
   height: 40px;
+}
+
+h2.sm-heading {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
 }
 
 /*# sourceMappingURL=main.css.map */
