@@ -97,8 +97,18 @@
   padding: 1rem 0;
   transition: all 0.3s ease-out;
 }
-.menu .nav-link:hover {
-  color: #2b4881;
+.menu .nav-link:hover, .menu .nav-link:focus {
+  color: #FFD700;
+  filter: drop-shadow(0 0 2px #FFD700);
+  outline: none;
+}
+.menu .nav-link:active {
+  color: #ffdf33;
+  text-decoration: underline;
+}
+.menu .nav-link:focus {
+  outline: 2px dashed #FFD700;
+  outline-offset: 4px;
 }
 
 .nav-item:nth-child(1) {
@@ -161,7 +171,7 @@ h1.lg-heading {
 }
 
 h2.sm-heading {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 400;
   margin-bottom: 1rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -169,7 +179,7 @@ h2.sm-heading {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
   font-weight: 300;
   line-height: 1.25;
   margin: 0 0 1rem;
@@ -185,28 +195,44 @@ a {
   color: #F8F8FF;
   text-decoration: none;
 }
-a:hover {
-  color: #2b4881;
+a:hover, a:focus {
+  color: #FFD700;
+  filter: drop-shadow(0 0 2px #FFD700);
   transition: all 0.3s ease-out;
+}
+a:active {
+  color: #ffdf33;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 2px dashed #FFD700;
+  outline-offset: 4px;
 }
 
 main {
   flex: 1;
   padding: 4rem 2rem 2rem;
 }
-main .icons {
-  margin-top: 1rem;
-}
 main .icons a {
   font-size: 2rem;
   margin-right: 1rem;
+  transition: all 0.2s ease;
 }
 main .icons a:last-child {
   margin-right: 0;
 }
-main .icons a:hover {
-  color: #2b4881;
-  transition: all 0.3s ease-out;
+main .icons a:hover, main .icons a:focus {
+  color: #FFD700;
+  filter: drop-shadow(0 0 2px #FFD700);
+}
+main .icons a:active {
+  color: #ffdf33;
+  transform: scale(0.95);
+  filter: brightness(1.3);
+}
+main .icons a:focus {
+  outline: 2px dashed #FFD700;
+  outline-offset: 4px;
 }
 main#home {
   overflow: hidden;
@@ -313,10 +339,19 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  transition: all 0.2s ease;
 }
 .btn:hover {
   background: #182848;
   color: #F8F8FF;
+}
+.btn:focus {
+  outline: 2px dashed #2b4881;
+  outline-offset: 4px;
+}
+.btn:active {
+  transform: scale(0.97);
+  background: #253d6e;
 }
 
 .btn-dark {
@@ -324,6 +359,7 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  transition: all 0.2s ease;
   background: black;
   color: #F8EBE3;
 }
@@ -331,18 +367,35 @@ header {
   background: #182848;
   color: #F8F8FF;
 }
+.btn-dark:focus {
+  outline: 2px dashed #2b4881;
+  outline-offset: 4px;
+}
+.btn-dark:active {
+  transform: scale(0.97);
+  background: #253d6e;
+}
 
 .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  transition: all 0.2s ease;
   background: #96a36e;
   color: #333;
 }
 .btn-light:hover {
   background: #182848;
   color: #F8F8FF;
+}
+.btn-light:focus {
+  outline: 2px dashed #2b4881;
+  outline-offset: 4px;
+}
+.btn-light:active {
+  transform: scale(0.97);
+  background: #253d6e;
 }
 
 #main-footer {

@@ -127,9 +127,22 @@
     text-transform: uppercase;
     padding: 1rem 0;
     @include easeOut;
-
-    &:hover {
-      color: $light-secondary-color;
+  
+    &:hover,
+    &:focus {
+      color: $hover-link-color;
+      filter: drop-shadow(0 0 2px $hover-link-color);
+      outline: none;
+    }
+  
+    &:active {
+      color: lighten($hover-link-color, 10%);
+      text-decoration: underline;
+    }
+  
+    &:focus {
+      outline: 2px dashed $hover-link-color;
+      outline-offset: 4px;
     }
   }
 }
