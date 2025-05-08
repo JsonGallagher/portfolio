@@ -1,39 +1,38 @@
 @use "config" as *;
-// Wide screens
+
+// ─── XL Screens ────────────────────────────────────────
 @include mediaXl {
   main {
     .lg-heading {
       font-size: 5rem;
     }
   }
+
   .bio,
   .job {
     font-size: 1.25rem;
   }
-  main {
-    min-height: calc(100vh - 40px);
-  }
+
   #main-footer {
     font-size: 0.75rem;
-    height: 40px;
   }
 }
 
-// Desktops and Laptops
+// ─── Large Screens (Desktops & Laptops) ───────────────
 @include mediaLg {
   h1.lg-heading {
     margin-bottom: 1.5rem;
   }
 }
 
-// Tablets & Small Laptops - (max-width: 768px)
+// ─── Medium Screens (Tablets & Small Laptops) ─────────
 @include mediaMd {
   main {
     align-items: center;
 
     .lg-heading {
-      margin-bottom: 0.5rem;
       font-size: 4rem;
+      margin-bottom: 0.5rem;
       max-width: 90%;
     }
   }
@@ -46,8 +45,8 @@
     font-size: 1rem;
   }
 
-  ul.menu-nav,
-  div.menu-branding {
+  .menu-nav,
+  .menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -59,13 +58,13 @@
 
   .menu-nav {
     height: 65vh;
-    transform: translate3d(-100%, 0, 0);
     font-size: 24px;
+    transform: translate3d(-100%, 0, 0);
   }
 
   .menu-branding {
     height: 35vh;
-    transform: translate3d(100%, 0 0);
+    transform: translate3d(100%, 0, 0);
 
     .portrait {
       background: url("../img/portrait_small2.jpg");
@@ -84,33 +83,22 @@
     grid-template-columns: 1fr;
   }
 
-  //Medium sized contact boxes on tablets
   .boxes .contactBoxes__email,
   .boxes .contactBoxes__phone {
     font-size: 1.5rem;
   }
-  main {
-    min-height: calc(100vh - 40px);
-  }
-  #main-footer {
-    height: 40px;
-  }
 }
 
-// Mobile - (max-width: 555px)
+// ─── Small Screens (Phones) ────────────────────────────
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
   }
 
-  h1.lg-heading {
-    margin-bottom: 1rem;
-  }
-
-  h1.lg-heading,
-  h2.lg-heading {
+  .lg-heading {
     font-size: 3rem;
     font-weight: 600;
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -130,16 +118,16 @@
     font-size: 1rem;
   }
 
-  main {
-    min-height: calc(100dvh - 40px);
+  .icons a {
+    font-size: 0.75rem;
   }
 
   #main-footer {
     font-size: 0.7rem;
-    height: 40px;
   }
+}
 
-  .icons a {
-    font-size: 0.75rem;
-  }
+// ─── Shared Footer Styles (All < 768px) ───────────────
+#main-footer {
+  height: 40px;
 }

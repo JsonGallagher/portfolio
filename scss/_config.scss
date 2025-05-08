@@ -1,9 +1,9 @@
 @use "sass:color";
 
 // Base colors
-$primary-color: #1a1a1a;
-$secondary-color: #06f;
-$tertiary-color: #ff006a;
+$primary-color: #0A0B07;
+$secondary-color: #182848;
+$tertiary-color: #4b6cb7;
 
 // Derived color using modern color.adjust()
 $light-secondary-color: color.adjust($secondary-color, $lightness: 15%);
@@ -15,15 +15,16 @@ $show-home-image: true;
 @mixin easeOut {
   transition: all 0.3s ease-out;
 }
-
+$footer-height: 60px;
+$footer-height-sm: 40px;
 // Background styling with overlay
 @mixin background {
   @if $show-home-image {
     &#bg-img {
       background-image: linear-gradient(
-        147deg,
+        135deg,
         $secondary-color 0%,
-        $tertiary-color 80%
+        $tertiary-color 100%
       );
 
       &:after {
@@ -41,10 +42,10 @@ $show-home-image: true;
 
 // Dynamic text color based on background
 @function set-text-color($color) {
-  @if color.channel($color, "lightness", $space: hsl) > 40 {
+  @if lightness($color) > 40 {
     @return #000;
   } @else {
-    @return #f5f5f5;
+    @return #F8F8FF;
   }
 }
 
