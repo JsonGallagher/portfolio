@@ -106,9 +106,12 @@
   color: #efd372;
   text-decoration: underline;
 }
+.menu .nav-link:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 .menu .nav-link:focus {
-  outline: 2px dashed #EAC544;
-  outline-offset: 4px;
+  outline: none;
 }
 
 .nav-item:nth-child(1) {

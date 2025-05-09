@@ -141,11 +141,7 @@
       color: lighten($hover-link-color, 10%);
       text-decoration: underline;
     }
-  
-    &:focus {
-      outline: 2px dashed $hover-link-color;
-      outline-offset: 4px;
-    }
+    @include focus-outline;
   }
 }
 
