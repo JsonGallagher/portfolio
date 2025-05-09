@@ -204,9 +204,12 @@ a:active {
   color: #efd372;
   text-decoration: underline;
 }
+a:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 a:focus {
-  outline: 2px dashed #EAC544;
-  outline-offset: 4px;
+  outline: none;
 }
 
 main {
@@ -239,9 +242,12 @@ main .icons a:active {
 main .icons a:active i {
   transform: scale(0.95);
 }
+main .icons a:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 main .icons a:focus {
-  outline: 2px dashed #EAC544;
-  outline-offset: 4px;
+  outline: none;
 }
 main#home {
   overflow: hidden;
@@ -285,7 +291,7 @@ header {
 
 .bio {
   grid-area: bio;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 2rem;
   background: #464d2a;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -348,15 +354,18 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .btn:hover {
   background: #182848;
   color: #F8F8FF;
 }
+.btn:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 .btn:focus {
-  outline: 2px dashed #88a2d7;
-  outline-offset: 4px;
+  outline: none;
 }
 .btn:active {
   transform: scale(0.97);
@@ -368,7 +377,7 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
   background: black;
   color: #F8EBE3;
 }
@@ -376,9 +385,12 @@ header {
   background: #182848;
   color: #F8F8FF;
 }
+.btn-dark:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 .btn-dark:focus {
-  outline: 2px dashed #88a2d7;
-  outline-offset: 4px;
+  outline: none;
 }
 .btn-dark:active {
   transform: scale(0.97);
@@ -390,7 +402,7 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
   background: #9dab65;
   color: #333;
 }
@@ -398,9 +410,12 @@ header {
   background: #182848;
   color: #F8F8FF;
 }
+.btn-light:focus-visible {
+  outline: 2px solid #EAC544;
+  outline-offset: 3px;
+}
 .btn-light:focus {
-  outline: 2px dashed #88a2d7;
-  outline-offset: 4px;
+  outline: none;
 }
 .btn-light:active {
   transform: scale(0.97);

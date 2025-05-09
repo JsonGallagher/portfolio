@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "config" as *;
+@use "mixins" as *;
 
 // Menu Button
 .menu-btn {
