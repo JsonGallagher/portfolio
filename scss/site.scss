@@ -1,0 +1,13 @@
+// ───────────────────────────────────────────────────────────
+// site.scss
+// This is the main SCSS entry point. It compiles all partials
+// and modules into a single stylesheet for the site.
+// Do NOT write styles directly in this file.
+// ───────────────────────────────────────────────────────────
+
+@use "sass:color";
+@use "config" as *;
+@use "mixins" as *;
+@use "menu" as *;
+@use "main" as *;
+@use "mobile" as *;
