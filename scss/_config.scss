@@ -1,13 +1,14 @@
 @use "sass:color";
 
 // Base colors
-$primary-color: #0a0b06;
+$primary-color: #161616;
 $secondary-color: #182848;
-$tertiary-color: #4b6cb7;
+$tertiary-color: #F5090A;
 $hover-link-color: #EAC544;
 
 // Derived color using modern color.adjust()
 $light-secondary-color: color.adjust($secondary-color, $lightness: 50%);
+$light-tertiary-color: color.adjust($tertiary-color, $lightness: 10%);
 
 // Toggle background image
 $show-home-image: true;

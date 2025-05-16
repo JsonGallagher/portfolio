@@ -7,10 +7,6 @@
   .job {
     font-size: 1.25rem;
   }
-
-  #main-footer {
-    font-size: 0.75rem;
-  }
 }
 
 // ─── Large Screens (Desktops & Laptops) ───────────────
@@ -19,6 +15,7 @@
     margin-bottom: 1.5rem;
   }
 }
+
 
 // ─── Medium Screens (Tablets & Small Laptops) ─────────
 @include mediaMd {
@@ -93,10 +90,6 @@
   main .icons a {
     font-size: 1.5rem;
   }
-
-  #main-footer {
-    font-size: 0.7rem;
-  }
 }
 
 // ─── Shared Footer Styles (All < 768px) ───────────────
@@ -111,4 +104,9 @@ h2.sm-heading {
 
 h3 {
   font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+}
+
+#main-footer {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  height: 40px;
 }
