@@ -1,1 +1,108 @@
-node_modules
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+.venv/
+venv/
+env/
+pip-log.txt
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+log/
+tmp/
+vendor/bundle
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+target/
+.idea/
+
+# C/C++
+*.o
+*.obj
+*.so
+*.exe
+*.out
+
+# macOS
+*.swp
+*.swo
+*.tmp
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# JetBrains IDEs
+.idea/
+
+# Build directories
+dist/
+build/
+out/
+
+# Environment
+.env.*
+.env
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+*.bak
+*.tmp
+*.orig
+*.swp
+*.swo
+*.sass-cache
+.cache/
+coverage/
+*.cover
+*.lcov
+*.lcov.info
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+# Test
+test-output/
+.nyc_output/
+
+# Git
+*.orig
+*.rej
