@@ -1,74 +1,27 @@
 @use "sass:color";
 
 // Base colors
-$primary-color: #1a1a1a;
-$secondary-color: #06f;
-$tertiary-color: #ff006a;
+$primary-color: #161616;
+$secondary-color: #182848;
+$tertiary-color: #F5090A;
+$hover-link-color: #EAC544;
 
 // Derived color using modern color.adjust()
-$light-secondary-color: color.adjust($secondary-color, $lightness: 15%);
+$light-secondary-color: color.adjust($secondary-color, $lightness: 50%);
+$light-tertiary-color: color.adjust($tertiary-color, $lightness: 10%);
 
 // Toggle background image
 $show-home-image: true;
 
-// Ease-out transition
-@mixin easeOut {
-  transition: all 0.3s ease-out;
-}
-
-// Background styling with overlay
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background-image: linear-gradient(
-        147deg,
-        $secondary-color 0%,
-        $tertiary-color 80%
-      );
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-    }
-  }
-}
+// Footer height
+$footer-height: 60px;
+$footer-height-sm: 40px;
 
 // Dynamic text color based on background
 @function set-text-color($color) {
-  @if color.channel($color, "lightness", $space: hsl) > 40 {
+  @if lightness($color) > 40 {
     @return #000;
   } @else {
-    @return #f5f5f5;
-  }
-}
-
-// Media query mixins
-@mixin mediaSm {
-  @media screen and (max-width: 555px) {
-    @content;
-  }
-}
-
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
+    @return #F8F8FF;
   }
 }

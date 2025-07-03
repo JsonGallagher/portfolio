@@ -1,5 +1,15 @@
+// ─── Module Imports ──────────────────────────────────────
+
+// Core Sass color functions (e.g., color.adjust, lighten, etc.)
 @use "sass:color";
+
+// Global design tokens and variables (colors, fonts, breakpoints)
 @use "config" as *;
+
+// Shared mixins (e.g., transitions, card hover, focus outlines)
+@use "mixins" as *;
+
+// Site-wide menu layout styles
 @use "menu" as *;
 
 * {
@@ -8,60 +18,128 @@
 
 body {
   @include background;
-  color: set-text-color($primary-color);
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   margin: 0;
+  color: set-text-color($primary-color);
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
 }
 
-// Heading styles
-h1,
-h2 {
+::selection {
+  background: $hover-link-color;
+  color: #000;
+}
+
+// ─── Headings ───────────────────────────────────────────
+
+h1, h2 {
   margin: 0;
   font-weight: 600;
   line-height: 1.25;
+}
 
-  &.lg-heading {
-    font-family: "Fjalla One", sans-serif;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 5rem;
-    margin-bottom: 1rem;
-  }
+h1.lg-heading {
+  font-family: "Fjalla One", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
 
-  &.sm-heading {
-    font-weight: 500;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
+h2.sm-heading {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: lighten(set-text-color($primary-color), 10%);
 }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
   font-weight: 300;
-}
-
-div h3 {
-  margin: 0;
+  line-height: 1.25;
+  margin: 0 0 1rem;
 }
 
 h4 {
-  margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: 300;
+  margin: 1rem 0 0.25rem;
 }
 
-div h4 {
-  margin-top: 0.25rem;
-}
+// ─── Links ─────────────────────────────────────────────
 
 a {
-  color: #fff;
+  color: #F8F8FF;
   text-decoration: none;
 
-  &:hover {
-    color: $light-secondary-color;
+  &:hover,
+  &:focus {
+    @include link-hover-style;
     @include easeOut();
+  }
+
+  &:active {
+    color: lighten($hover-link-color, 10%);
+    text-decoration: underline;
+  }
+
+  @include focus-outline;
+}
+
+// ─── Layout ─────────────────────────────────────────────
+
+main {
+  flex: 1;
+  padding: 4rem 2rem 2rem;
+
+  .icons a {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 1rem;
+    transition: color 0.2s ease, filter 0.2s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    i {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover,
+    &:focus {
+      @include link-hover-style;
+
+      i {
+        transform: scale(1.05);
+      }
+    }
+
+    &:active {
+      color: lighten($hover-link-color, 10%);
+      filter: brightness(1.3);
+
+      i {
+        transform: scale(0.95);
+      }
+    }
+
+    @include focus-outline;
+  }
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 15vh;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -75,34 +153,14 @@ header {
   color: $light-secondary-color;
 }
 
-main {
-  padding: 3rem;
-  min-height: calc(100vh - 60px);
+// ─── Section Layouts ────────────────────────────────────
 
-  .icons {
-    margin-top: 1rem;
-
-    a {
-      padding-right: 0.6rem;
-
-      &:hover {
-        color: $light-secondary-color;
-        @include easeOut();
-      }
-    }
-  }
-
-  &#home {
-    overflow: hidden;
-
-    h1 {
-      margin-top: 20vh;
-    }
-  }
+.section {
+  margin-bottom: 4rem;
 }
 
-// Grid layout for about section
 .about-info {
+  @extend .section;
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
@@ -111,7 +169,6 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
-// Bio image
 .bio-image {
   grid-area: bioimage;
   margin: auto;
@@ -120,17 +177,15 @@ main {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-// Bio and job cards
 .bio {
   grid-area: bio;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 2rem;
   background: color.adjust($primary-color, $lightness: 20%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    @include card-hover;
   }
 }
 
@@ -141,35 +196,27 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    @include card-hover;
   }
 }
 
-.job-1 {
-  grid-area: job1;
-}
+.job-1 { grid-area: job1; }
+.job-2 { grid-area: job2; }
+.job-3 { grid-area: job3; }
 
-.job-2 {
-  grid-area: job2;
-}
+// ─── Contact Boxes ──────────────────────────────────────
 
-.job-3 {
-  grid-area: job3;
-}
-
-// Contact boxes
 .boxes {
+  @extend .section;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  gap: 2rem;
 
   div {
     border: 2px #fff solid;
-    padding: 1rem;
-    margin-bottom: 3rem;
+    padding: 1rem 2rem;
     @include easeOut;
 
     &:hover {
@@ -182,23 +229,32 @@ main {
       }
     }
   }
+
+  .contactBoxes__email,
+  .contactBoxes__phone {
+    font-size: 2rem;
+  }
 }
 
-.boxes .contactBoxes__email,
-.boxes .contactBoxes__phone {
-  font-size: 2rem;
-}
+// ─── Buttons ────────────────────────────────────────────
 
-// Button base mixin
 @mixin btn-base {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
+  }
+
+  @include focus-outline;
+
+  &:active {
+    transform: scale(0.97);
+    background: lighten($secondary-color, 10%);
   }
 }
 
@@ -209,7 +265,7 @@ main {
 .btn-dark {
   @include btn-base;
   background: color.adjust($primary-color, $lightness: -50%);
-  color: #fff;
+  color: #F8EBE3;
 }
 
 .btn-light {
@@ -218,22 +274,27 @@ main {
   color: #333;
 }
 
+// ─── Footer ─────────────────────────────────────────────
+
 #main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.75rem;
   text-align: center;
-  padding: 0.7rem 0;
+  padding: 0 1rem;
   background: $primary-color;
   color: set-text-color($primary-color);
-  height: 60px;
+  height: 40px;
   font-weight: 100;
 }
 
-// Font Awesome icons
+// ─── Font Awesome ──────────────────────────────────────
+
 .fab {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-// Heart animation
 .fa-heart {
   color: #e0245e;
   padding: 0 2px;

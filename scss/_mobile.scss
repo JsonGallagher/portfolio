@@ -1,53 +1,35 @@
 @use "config" as *;
-// Wide screens
+@use "mixins" as *;
+
+// ─── XL Screens ────────────────────────────────────────
 @include mediaXl {
-  main {
-    .lg-heading {
-      font-size: 5rem;
-    }
-  }
   .bio,
   .job {
     font-size: 1.25rem;
   }
-  main {
-    min-height: calc(100vh - 40px);
-  }
-  #main-footer {
-    font-size: 0.75rem;
-    height: 40px;
-  }
 }
 
-// Desktops and Laptops
+// ─── Large Screens (Desktops & Laptops) ───────────────
 @include mediaLg {
   h1.lg-heading {
     margin-bottom: 1.5rem;
   }
 }
 
-// Tablets & Small Laptops - (max-width: 768px)
+
+// ─── Medium Screens (Tablets & Small Laptops) ─────────
 @include mediaMd {
   main {
     align-items: center;
 
     .lg-heading {
       margin-bottom: 0.5rem;
-      font-size: 4rem;
       max-width: 90%;
     }
   }
 
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  ul.menu-nav,
-  div.menu-branding {
+  .menu-nav,
+  .menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -58,14 +40,14 @@
   }
 
   .menu-nav {
-    height: 65vh;
-    transform: translate3d(-100%, 0, 0);
+    height: 65dvh;
     font-size: 24px;
+    transform: translate3d(-100%, 0, 0);
   }
 
   .menu-branding {
     height: 35vh;
-    transform: translate3d(100%, 0 0);
+    transform: translate3d(100%, 0, 0);
 
     .portrait {
       background: url("../img/portrait_small2.jpg");
@@ -84,41 +66,16 @@
     grid-template-columns: 1fr;
   }
 
-  //Medium sized contact boxes on tablets
   .boxes .contactBoxes__email,
   .boxes .contactBoxes__phone {
     font-size: 1.5rem;
   }
-  main {
-    min-height: calc(100vh - 40px);
-  }
-  #main-footer {
-    height: 40px;
-  }
 }
 
-// Mobile - (max-width: 555px)
+// ─── Small Screens (Phones) ────────────────────────────
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
-  }
-
-  h1.lg-heading {
-    margin-bottom: 1rem;
-  }
-
-  h1.lg-heading,
-  h2.lg-heading {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  h3 {
-    font-size: 0.9rem;
   }
 
   .bio-image {
@@ -130,16 +87,26 @@
     font-size: 1rem;
   }
 
-  main {
-    min-height: calc(100dvh - 40px);
+  main .icons a {
+    font-size: 1.5rem;
   }
+}
 
-  #main-footer {
-    font-size: 0.7rem;
-    height: 40px;
-  }
+// ─── Shared Footer Styles (All < 768px) ───────────────
+#main-footer {
+  height: 40px;
+}
 
-  .icons a {
-    font-size: 0.75rem;
-  }
+// ─── Global Heading Adjustments (fluid scaling) ───────
+h2.sm-heading {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+}
+
+#main-footer {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  height: 40px;
 }

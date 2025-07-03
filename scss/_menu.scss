@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "config" as *;
+@use "mixins" as *;
 
 // Menu Button
 .menu-btn {
@@ -27,7 +28,7 @@
       //line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
-        background: $light-secondary-color;
+        background: $tertiary-color;
       }
       //line 2 - Hide
       &:nth-child(2) {
@@ -69,7 +70,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: color.adjust($primary-color, $lightness: 5%);
+    background: $primary-color;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     @include easeOut;
@@ -83,8 +84,8 @@
   &-branding {
     background-image: linear-gradient(
       327deg,
-      $secondary-color 0%,
-      $tertiary-color 90%
+      $tertiary-color 0%,
+      $hover-link-color 90%
     );
     transform: translate3d(-100%, 0, 0);
     opacity: 1;
@@ -100,12 +101,13 @@
       height: 250px;
       background: url(../img/portrait2.jpg);
       border-radius: 50%;
-      border: solid 3px $light-secondary-color;
+      border: solid 3px $primary-color;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     }
   }
   .nav-item {
     transform: translate3d(600px, 0, 0);
+
     @include easeOut;
 
     &.show {
@@ -127,10 +129,19 @@
     text-transform: uppercase;
     padding: 1rem 0;
     @include easeOut;
-
-    &:hover {
-      color: $light-secondary-color;
+  
+    &:hover,
+    &:focus {
+      color: $hover-link-color;
+      filter: drop-shadow(0 0 1px $hover-link-color);
+      outline: none;
     }
+  
+    &:active {
+      color: lighten($hover-link-color, 10%);
+      text-decoration: underline;
+    }
+    @include focus-outline;
   }
 }
 
