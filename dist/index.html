@@ -53,13 +53,22 @@
   <link href="css/main.css" rel="stylesheet">
   
   <!-- 11. Analytics - Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N906JJKZDJ"></script>
   <script>
+    // queue hits until gtag.js is loaded
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
+  
+    // record the initial page-view immediately
     gtag('js', new Date());
-
     gtag('config', 'G-N906JJKZDJ');
+  
+    // lazy-load the full library when the browser is idle
+    requestIdleCallback(() => {
+      const s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-N906JJKZDJ';
+      s.async = true;
+      document.head.appendChild(s);
+    });
   </script>
 </head>
 
