@@ -138,7 +138,7 @@
     }
   
     &:active {
-      color: lighten($hover-link-color, 10%);
+      color: color.adjust($hover-link-color, $lightness: 10%);
       text-decoration: underline;
     }
     @include focus-outline;

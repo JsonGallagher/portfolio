@@ -19,7 +19,7 @@ $footer-height-sm: 40px;
 
 // Dynamic text color based on background
 @function set-text-color($color) {
-  @if lightness($color) > 40 {
+  @if color.channel($color, "lightness", $space: hsl) > 40 {
     @return #000;
   } @else {
     @return #F8F8FF;
