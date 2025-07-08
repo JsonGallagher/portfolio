@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<!--Changes--> 
+<html lang="en">
 <head>
+  <!-- 1. Charset as early as possible -->
   <meta charset="utf-8">
-  <title>Jason Gallagher - Marketing Leader & Full-Stack Engineer</title>
-  <meta name="description" content="Jason Gallagher is a marketing leader and full-stack engineer based in Colorado.">
-  <meta name="keywords" content="Colorado Marketing Manager, Colorado Software Engineer, Colorado Social Media, Colorado SEO, Colorado PPC, Colorado Lead Generation">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie-edge">
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans:400,700" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/74628ed66f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- 2. Responsive & IE-edge -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- 3. Title & canonical -->
+  <title>Jason Gallagher – Growth Engineer</title>
+  <link rel="canonical" href="https://www.jasongallagher.co/">
+  
+  <!-- 4. Description only (keywords tag is obsolete) -->
+  <meta name="description" content="Jason Gallagher is a Colorado-based growth engineer specializing in SaaS growth, conversion optimization, and full-stack web development.">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- 5. Open Graph & Twitter Card for social sharing -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Jason Gallagher – Growth Engineer">
+  <meta property="og:description" content="Colorado-based growth engineer specializing in SaaS growth, conversion optimization, and full-stack web development.">
+  <meta property="og:url"         content="https://www.jasongallagher.co/">
+  <meta property="og:image"       content="https://www.jasongallagher.co/img/portrait2.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:site"       content="@heyjson">
+
+  <!-- 6. Favicon & theme color -->
+  <link rel="icon" href="/favicon.ico">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- 7. Preconnect / preload fonts & analytics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans:400,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/74628ed66f.js" crossorigin="anonymous"></script>
+  
+  <!-- 8. Critical CSS in-lined, deferred non-critical -->
+  <link rel="preload" href="css/main.css" as="style">
+  <link href="css/main.css" rel="stylesheet">
+  
+  <!-- 9. Analytics (async is good) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71952294-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'UA-71952294-1');
+    gtag('config', 'UA-71952294-1', { 'anonymize_ip': true });
   </script>
 </head>
 
@@ -53,7 +76,7 @@
 
   <main id="home">
     <h1 class="lg-heading">Jason Gallagher</h1>
-    <h2 class="sm-heading">Marketing leader and full-stack engineer focused on data-driven growth, automation, and AI-powered digital experiences.</h2>
+    <h2 class="sm-heading">Marketing Leader & Growth Engineer | Scalable Acquisition & Retention Through AI, Automation & Data</h2>
     <h3><a href="tel:+15859051130">585.905.1130</a> • <a href ="mailto:jason@jasongallagher.co" itemprop="email">jason@jasongallagher.co</a></h3>
     <div class="icons">
       <a href="https://www.linkedin.com/in/jsongallagher">
@@ -71,30 +94,44 @@
   <footer id="main-footer">
     This website was handcrafted with <i class="fas fa-heart"></i> by Jason Gallagher</a>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "ProfessionalService",
-    "name" : "Jason Gallagher",
-    "image": "https://www.jasongallagher.co/img/portrait2.jpg",
-    "description": "Marketing",
-    "telephone": "+15859051130",
-    "email": "jason@jasongallagher.co",
-    "url" : "https://www.jasongallagher.co",
-    "sameAs" : [
-      "https://www.facebook.com/jsongallagher",
-      "https://www.x.com/heyjson"
-      "https://www.linkedin.com/in/jsongallagher"
-    ],
-    "priceRange" : "$",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+15859051130",
-      "contactType": "Sales"
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jason Gallagher",
+      "image": "https://www.jasongallagher.co/img/portrait2.jpg",
+      "url": "https://www.jasongallagher.co",
+      "jobTitle": "Growth Engineer",
+      "description": "Jason Gallagher is a Colorado-based growth engineer specializing in data-driven growth, automation, and AI-powered digital experiences.",
+      "telephone": "+1-585-905-1130",
+      "email": "jason@jasongallagher.co",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denver",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      },
+      "areaServed": "US",
+      "sameAs": [
+        "https://www.facebook.com/jsongallagher",
+        "https://www.x.com/heyjson",
+        "https://www.linkedin.com/in/jsongallagher"
+      ],
+      "knowsAbout": [
+        "Growth Engineering",
+        "Conversion Optimization",
+        "Automation",
+        "AI-powered Experiences",
+        "Full-Stack Web Development"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Jason Gallagher Consulting",
+        "url": "https://www.jasongallagher.co"
+      }
     }
-  }
-  </script>
+    </script>
 </body>
 
 </html>
