@@ -80,31 +80,37 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  // Branding Side
-  &-branding {
-    background-image: linear-gradient(
-      327deg,
-      $tertiary-color 0%,
-      $hover-link-color 90%
-    );
-    transform: translate3d(-100%, 0, 0);
-    opacity: 1;
-    @include easeOut;
+// Branding Side
+&-branding {
+  background-image: linear-gradient(
+    327deg,
+    $tertiary-color 0%,
+    $hover-link-color 90%
+  );
+  transform: translate3d(-100%, 0, 0);
+  opacity: 1;
+  @include easeOut;
 
-    &.show {
-      //Slide in nav from left side of screen
-      transform: translate3d(0, 0, 0);
-    }
-
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url(../img/portrait2.jpg);
-      border-radius: 50%;
-      border: solid 3px $primary-color;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    }
+  /* slide-in animation */
+  &.show {
+    transform: translate3d(0, 0, 0);
   }
+
+  /* ───────── 1. BASE: no background, so nothing to download ───────── */
+  .portrait {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid $primary-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ───────── 2. OPEN STATE: add background when .show is present ──── */
+  &.show .portrait {
+    background: url("../img/portrait2.jpg") center/cover no-repeat;
+  }
+}
+
   .nav-item {
     transform: translate3d(600px, 0, 0);
 
