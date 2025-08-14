@@ -60,6 +60,17 @@
   filter: drop-shadow(0 0 1px $hover-link-color);
 }
 
+// ─── Color Utilities ────────────────────────────────────
+
+@function set-text-color($background-color) {
+  // Choose a readable ink based on background lightness
+  @if (lightness($background-color) > 50%) {
+    @return $ink-dark;
+  } @else {
+    @return $ink-light;
+  }
+}
+
 // ─── Accessibility & Focus ─────────────────────────────
 
 @mixin focus-outline {
