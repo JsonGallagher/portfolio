@@ -70,6 +70,13 @@ h4 {
   margin: 1rem 0 0.25rem;
 }
 
+// Antialiasing and mix-blend-mode for better readability
+h1.lg-heading,
+h2.sm-heading {
+  -webkit-font-smoothing: antialiased;
+  mix-blend-mode: normal;
+}
+
 // ─── Links ─────────────────────────────────────────────
 
 a {

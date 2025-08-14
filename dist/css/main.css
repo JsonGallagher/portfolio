@@ -208,6 +208,12 @@ h4 {
   margin: 1rem 0 0.25rem;
 }
 
+h1.lg-heading,
+h2.sm-heading {
+  -webkit-font-smoothing: antialiased;
+  mix-blend-mode: normal;
+}
+
 a {
   color: #f8f8ff;
   text-decoration: none;
