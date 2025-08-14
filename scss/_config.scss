@@ -1,27 +1,25 @@
 @use "sass:color";
 
-// Base colors
+// ── Base palette
 $primary-color: #161616;
 $secondary-color: #182848;
-$tertiary-color: #F5090A;
-$hover-link-color: #EAC544;
+$tertiary-color: #f5090a;
+$hover-link-color: #eac544;
 
-// Derived color using modern color.adjust()
-$light-secondary-color: color.adjust($secondary-color, $lightness: 50%);
-$light-tertiary-color: color.adjust($tertiary-color, $lightness: 10%);
+// ── Text inks
+$ink-light: #f8f8ff; // use on dark backgrounds
+$ink-dark: #000000; // use on light backgrounds
 
-// Toggle background image
+// ── Derived (safe) variants — use color.scale so we never exceed 100% lightness
+$light-secondary-color: color.scale($secondary-color, $lightness: 50%);
+$light-tertiary-color: color.scale($tertiary-color, $lightness: 10%);
+
+// ── App tokens
+$heading-color: $ink-light;
+$body-text-color: $ink-light;
+
+// Feature flags / layout constants (unchanged)
 $show-home-image: true;
 
-// Footer height
 $footer-height: 60px;
 $footer-height-sm: 40px;
-
-// Dynamic text color based on background
-@function set-text-color($color) {
-  @if color.channel($color, "lightness", $space: hsl) > 40 {
-    @return #000;
-  } @else {
-    @return #F8F8FF;
-  }
-}
